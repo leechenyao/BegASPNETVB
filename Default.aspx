@@ -1,30 +1,11 @@
-﻿<%@ Page Language="VB" %>
+﻿<%@ Page Title="Welcome to Planet Wrox" Language="VB" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="Server">
+    <h1>Hi there visitor and welcome to Planet Wrox</h1>
+    <p>You can <a href="Login.aspx">log in</a> here</p>
+    <p>We&#39;re glad you&#39;re paying a visit to <a href="http://www.PlanetWrox.com">www.PlanetWrox.com</a>, the coolest music community site on the Internet.</p>
+    <p class="Introduction">Feel free to have a <a href="Default.aspx">look around</a>; there are lots of interesting <strong>reviews and concert pictures</strong> to be found here.</p>
+</asp:Content>
 
-<script runat="server">
-
-</script>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <link href="Styles/Styles.css" rel="stylesheet" type="text/css" />
-    <script src="Scripts/modernizr-2.8.3.js"></script>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div id="PageWrapper">
-            <header>Header Goes Here</header>
-            <nav>Menu Goes Here</nav>
-            <section id="MainContent">
-                <h1>Hi there visitor and welcome to Planet Wrox</h1>
-                <p>We&#39;re glad you&#39;re paying a visit to <a href="http://www.PlanetWrox.com">www.PlanetWrox.com</a>, the coolest music community site on the Internet.</p>
-                <p class="Introduction">Feel free to have a <a href="Default.aspx">look around</a>; there are lots of interesting <strong>reviews and concert pictures</strong> to be found here.</p>
-            </section>
-            <aside id="Sidebar">Sidebar Goes Here</aside>
-            <footer>Footer Goes Here</footer>
-        </div>
-    </form>
-</body>
-</html>

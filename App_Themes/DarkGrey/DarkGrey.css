@@ -1,0 +1,79 @@
+﻿* {
+    font-family: Verdana, Arial, Sans-Serif;
+}
+
+body {
+    margin: 0;
+    background-color: #565656;
+}
+
+a {
+    color: #FE601A;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+h1 {
+    font-size: 20px;
+}
+
+header {
+    background-color: #E34600;
+    margin-bottom: 20px;
+}
+
+    header a {
+        background-image: url(Images/Header.jpg);
+        background-repeat: no-repeat;
+        width: 944px;
+        height: 138px;
+        display: block;
+    }
+
+nav {
+    width: 130px;
+    float: left;
+    padding: 10px;
+    padding-top: 0;
+    background-color: #F8F4EF;
+    margin-left: 35px;
+    margin-right: 20px;
+    font-size: 0.8em;
+}
+
+.FirstLevelMenuItems {
+    padding-top: 10px;
+}
+
+section#MainContent {
+    color: white;
+    font-size: 0.8em;
+    width: 600px;
+    min-height: 370px;
+    padding: 10px;
+    float: left;
+}
+
+aside#Sidebar {
+    font-size: 0.8em;
+    width: 124px;
+    color: White;
+    float: left;
+    padding-top: 10px;
+}
+
+footer {
+    text-align: center;
+    border-top: 2px dashed gray;
+    height: 37px;
+    line-height: 37px;
+    clear: both;
+    background-color: #FCBB5B;
+}
+
+.Introduction {
+    font-style: italic;
+}

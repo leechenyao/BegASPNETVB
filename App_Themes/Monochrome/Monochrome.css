@@ -1,0 +1,118 @@
+﻿* {
+    font-family: Arial, Sans-Serif;
+}
+
+body {
+    margin: 0;
+    background-color: #cccccc;
+}
+
+a {
+    text-decoration: none;
+    color: #0760B2;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 14px;
+    color: #7773A1;
+    margin-top: 10px;
+}
+
+#PageWrapper {
+    width: 844px;
+    background-color: #5487c0;
+    margin: auto;
+}
+
+header {
+    background-image: url(Images/Header.jpg);
+    width: 844px;
+    height: 86px;
+}
+
+    header a {
+        width: 844px;
+        height: 86px;
+        display: block;
+    }
+
+nav {
+    background-image: url(Images/MenuBackground.jpg);
+    width: 827px;
+    height: 36px;
+    padding-top: 7px;
+    padding-left: 17px;
+}
+
+    nav a {
+        color: #fff;
+    }
+
+.MainMenu {
+    border: 1px solid #999999;
+    width: 814px;
+    height: 19px;
+    background-color: #555555;
+}
+
+    .MainMenu ul li {
+        width: 200px;
+    }
+
+section#MainContent {
+    font-size: 0.8em;
+    width: 659px;
+    border-left: 1px solid white;
+    border-right: 2px solid white;
+    float: left;
+    background-color: #e1e1e1;
+    min-height: 500px;
+    padding: 10px;
+}
+
+aside#Sidebar {
+    font-size: 0.8em;
+    color: White;
+    background-image: url(Images/Sidebar.jpg);
+    background-repeat: no-repeat;
+    background-color: #7773A1;
+    width: 142px;
+    min-height: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    float: left;
+}
+
+footer {
+    width: 844px;
+    clear: both;
+    height: 37px;
+    background-color: #A8D5FE;
+    color: White;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: bold;
+    line-height: 37px;
+}
+
+.Introduction {
+    font-style: italic;
+    color: #3e3e3e;
+}
+
+.aspNetDisabled {
+    color: grey;
+}
+
+.MyButton {
+    color: White;
+}

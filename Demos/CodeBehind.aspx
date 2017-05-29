@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="CodeBehind.aspx.vb" Inherits="Demos_CodeBehind" %>
+﻿<%@ Page Title="Code Behind Demo" Language="VB" AutoEventWireup="false" CodeFile="CodeBehind.aspx.vb" Inherits="Demos_CodeBehind" %>
 
 <!DOCTYPE html>
 

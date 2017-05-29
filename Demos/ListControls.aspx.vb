@@ -1,6 +1,6 @@
 ﻿
 Partial Class Demos_ListControls
-    Inherits System.Web.UI.Page
+    Inherits BasePage
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Label1.Text = "In the DDL you selected " & DropDownList1.SelectedValue & "<br />"

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="TableDemo.aspx.vb" Inherits="Demos_TableDemo" %>
+﻿<%@ Page Title="Table Demo" Language="VB" AutoEventWireup="false" CodeFile="TableDemo.aspx.vb" Inherits="Demos_TableDemo" %>
 
 <!DOCTYPE html>
 

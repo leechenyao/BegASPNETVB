@@ -1,6 +1,6 @@
 ﻿
 Partial Class Demos_CalculatorDemo
-    Inherits System.Web.UI.Page
+    Inherits BasePage
 
     Protected Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles CalculateButton.Click
         If ValueBox1.Text.Length > 0 AndAlso ValueBox2.Text.Length > 0 Then

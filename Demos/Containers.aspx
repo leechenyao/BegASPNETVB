@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Containers.aspx.vb" Inherits="Demos_Containers" %>
+﻿<%@ Page Title="Containers Demo" Language="VB" AutoEventWireup="false" CodeFile="Containers.aspx.vb" Inherits="Demos_Containers" %>
 
 <!DOCTYPE html>
 

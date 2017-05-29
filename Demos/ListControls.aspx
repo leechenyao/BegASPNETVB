@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="ListControls.aspx.vb" Inherits="Demos_ListControls" %>
+﻿<%@ Page Title="List Controls Demo" Language="VB" AutoEventWireup="false" CodeFile="ListControls.aspx.vb" Inherits="Demos_ListControls" %>
 
 <!DOCTYPE html>
 

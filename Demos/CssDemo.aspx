@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="CssDemo.aspx.vb" Inherits="Demos_CssDemo" %>
+﻿<%@ Page Title="CSS Demo" Language="VB" AutoEventWireup="false" CodeFile="CssDemo.aspx.vb" Inherits="Demos_CssDemo" %>
 
 <!DOCTYPE html>
 

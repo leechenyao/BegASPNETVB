@@ -1,6 +1,6 @@
 ﻿
 Partial Class Demos_Containers
-    Inherits System.Web.UI.Page
+    Inherits BasePage
 
     Protected Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
         Panel1.Visible = CheckBox1.Checked

@@ -1,5 +1,5 @@
 ﻿
-Partial Class Demos_CssDemo
+Partial Class _Default
     Inherits BasePage
 
 End Class

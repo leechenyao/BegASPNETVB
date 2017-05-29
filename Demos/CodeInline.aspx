@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" %>
+﻿<%@ Page Title="Code Inline Demo" Language="VB" %>
 
 <!DOCTYPE html>
 
