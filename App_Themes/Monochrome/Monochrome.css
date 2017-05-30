@@ -116,3 +116,27 @@ footer {
 .MyButton {
     color: White;
 }
+
+ul.level1 {
+    font-size: 14px;
+    font-weight: bold;
+    height: 19px;
+    line-height: 19px;
+}
+
+    ul.level1 .selected {
+        background-color: #509EE7;
+    }
+
+a.level1 {
+    padding-left: 5px !important;
+}
+
+a.level2 {
+    background-color: #555555;
+    padding-left: 8px;
+}
+
+    a.level1:hover, a.level2:hover {
+        background-color: #509EE7;
+    }

@@ -16,6 +16,15 @@ Partial Class MasterPages_Frontend
                 End If
             End If
         End If
+
+        Select Case Page.Theme.ToLower()
+            Case "darkgrey"
+                Menu1.Visible = False
+                TreeView1.Visible = True
+            Case Else
+                Menu1.Visible = True
+                TreeView1.Visible = False
+        End Select
     End Sub
 
     Protected Sub ThemeList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeList.SelectedIndexChanged
