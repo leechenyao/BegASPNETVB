@@ -140,3 +140,7 @@ a.level2 {
     a.level1:hover, a.level2:hover {
         background-color: #509EE7;
     }
+
+img {
+    border: 0;
+}
