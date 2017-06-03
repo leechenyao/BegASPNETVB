@@ -11,7 +11,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Path="~/Scripts/WebForms/WebUIValidation.js" />
+            </Scripts>
+        </asp:ScriptManager>
         <div id="PageWrapper">
             <header><a href="/"></a></header>
             <nav>
@@ -44,6 +49,7 @@
             </aside>
             <footer>Footer Goes Here</footer>
         </div>
+        <asp:ContentPlaceHolder ID="cpClientScript" runat="server"></asp:ContentPlaceHolder>
     </form>
 </body>
 </html>

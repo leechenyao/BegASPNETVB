@@ -30,6 +30,7 @@ Partial Class Controls_ContactForm
             Dim mySmtpClient As SmtpClient = New SmtpClient()
             mySmtpClient.Send(myMessage)
             Message.Visible = True
+            MessageSentPara.Visible = True
             FormTable.Visible = False
             System.Threading.Thread.Sleep(5000)
         End If
