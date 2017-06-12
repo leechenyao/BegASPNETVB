@@ -27,4 +27,13 @@ Partial Class PhotoAlbums_Default
                Order By p.Id
                Select p
     End Function
+
+    Protected Sub ListView1_DataBound(sender As Object, e As EventArgs) Handles ListView1.DataBound
+        If Not String.IsNullOrEmpty(PhotoAlbumList.SelectedValue) Then
+            EditLink.NavigateUrl = String.Format("~/ManagePhotoAlbum.aspx?PhotoAlbumId={0}", PhotoAlbumList.SelectedValue)
+            EditLink.Visible = True
+        Else
+            EditLink.Visible = False
+        End If
+    End Sub
 End Class

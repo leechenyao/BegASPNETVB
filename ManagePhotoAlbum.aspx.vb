@@ -51,4 +51,12 @@ Partial Class _ManagePhotoAlbum
             myEntities.SaveChanges()
         End Using
     End Sub
+
+    Protected Sub ListView1_ItemCreated(sender As Object, e As ListViewItemEventArgs) Handles ListView1.ItemCreated
+        Select Case e.Item.ItemType
+            Case ListViewItemType.DataItem
+                Dim deleteButton As Button = CType(e.Item.FindControl("DeleteButton"), Button)
+                deleteButton.Visible = Roles.IsUserInRole("Managers")
+        End Select
+    End Sub
 End Class

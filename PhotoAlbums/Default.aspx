@@ -29,6 +29,9 @@
                     </div>
                 </LayoutTemplate>
             </asp:ListView>
+            <br />
+            <br />
+            <asp:HyperLink ID="EditLink" runat="server" Text="Edit Photo Album" />
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>

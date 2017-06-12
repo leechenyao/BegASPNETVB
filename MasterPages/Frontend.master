@@ -47,7 +47,21 @@
                 <br />
                 <Wrox:Banner ID="Banner1" runat="server" DisplayDirection="Vertical" />
             </aside>
-            <footer>Footer Goes Here</footer>
+            <footer>
+                <asp:LoginName ID="LoginName1" runat="server" FormatString="Logged in as {0}" />
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <LoggedInTemplate>
+                        (<asp:LoginStatus ID="LoginStatus1" runat="server" />)
+                    </LoggedInTemplate>
+                    <RoleGroups>
+                        <asp:RoleGroup Roles="Managers">
+                            <ContentTemplate>
+                                (<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Management/Default.aspx">Manage Site</asp:HyperLink> or <asp:LoginStatus ID="LoginStatus2" runat="server" />)
+                            </ContentTemplate>
+                        </asp:RoleGroup>
+                    </RoleGroups>
+                </asp:LoginView>
+            </footer>
         </div>
         <asp:ContentPlaceHolder ID="cpClientScript" runat="server"></asp:ContentPlaceHolder>
     </form>
