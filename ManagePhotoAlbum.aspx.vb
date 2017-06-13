@@ -3,6 +3,18 @@
 Partial Class _ManagePhotoAlbum
     Inherits BasePage
 
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim photoAlbumId As Integer = Convert.ToInt32(Request.QueryString.Get("PhotoAlbumId"))
+        Using myEntities As PlanetWroxEntities = New PlanetWroxEntities()
+            Dim photoAlbumOwner As String = (From p In myEntities.PhotoAlbums
+                                             Where p.Id = photoAlbumId
+                                             Select p.UserName).Single()
+            If User.Identity.Name <> photoAlbumOwner And Not User.IsInRole("Managers") Then
+                Response.Redirect("~/")
+            End If
+        End Using
+    End Sub
+
     ' The return type can be changed to IEnumerable, however to support
     ' paging and sorting, the following parameters must be added:
     '     ByVal maximumRows as Integer
@@ -50,13 +62,5 @@ Partial Class _ManagePhotoAlbum
             myEntities.Pictures.Remove(picture)
             myEntities.SaveChanges()
         End Using
-    End Sub
-
-    Protected Sub ListView1_ItemCreated(sender As Object, e As ListViewItemEventArgs) Handles ListView1.ItemCreated
-        Select Case e.Item.ItemType
-            Case ListViewItemType.DataItem
-                Dim deleteButton As Button = CType(e.Item.FindControl("DeleteButton"), Button)
-                deleteButton.Visible = Roles.IsUserInRole("Managers")
-        End Select
     End Sub
 End Class

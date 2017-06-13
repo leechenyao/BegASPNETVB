@@ -19,6 +19,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" />
         </EntityType>
         <EntityType Name="Picture">
           <Key>
@@ -141,6 +142,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Pictures" Relationship="PlanetWroxModel.FK_Picture_PhotoAlbum" FromRole="PhotoAlbum" ToRole="Picture" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Picture">
           <Key>
@@ -197,6 +199,7 @@
           <EntitySetMapping Name="PhotoAlbums">
             <EntityTypeMapping TypeName="PlanetWroxModel.PhotoAlbum">
               <MappingFragment StoreEntitySet="PhotoAlbum">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

@@ -21,6 +21,7 @@ End Class
 Partial Public Class PhotoAlbum
     Public Property Id As Integer
     Public Property Name As String
+    Public Property UserName As String
 
     Public Overridable Property Pictures As ICollection(Of Picture) = New HashSet(Of Picture)
 

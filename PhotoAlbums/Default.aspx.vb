@@ -30,8 +30,27 @@ Partial Class PhotoAlbums_Default
 
     Protected Sub ListView1_DataBound(sender As Object, e As EventArgs) Handles ListView1.DataBound
         If Not String.IsNullOrEmpty(PhotoAlbumList.SelectedValue) Then
-            EditLink.NavigateUrl = String.Format("~/ManagePhotoAlbum.aspx?PhotoAlbumId={0}", PhotoAlbumList.SelectedValue)
-            EditLink.Visible = True
+            Dim photoAlbumId As Integer = Convert.ToInt32(PhotoAlbumList.SelectedValue)
+            Using myEntities As PlanetWroxEntities = New PlanetWroxEntities()
+                Dim photoAlbumOwner As String = (From p In myEntities.PhotoAlbums
+                                                 Where p.Id = photoAlbumId
+                                                 Select p.UserName).Single()
+                If User.Identity.IsAuthenticated And (User.Identity.Name = photoAlbumOwner Or User.IsInRole("Managers")) Then
+                    EditLink.NavigateUrl = String.Format("~/ManagePhotoAlbum.aspx?PhotoAlbumId={0}", PhotoAlbumList.SelectedValue)
+                    EditLink.Visible = True
+                Else
+                    EditLink.Visible = False
+                End If
+
+                If Not String.IsNullOrEmpty(photoAlbumOwner) Then
+                    Dim ownerProfile As ProfileCommon = Profile.GetProfile(photoAlbumOwner)
+                    UserNameLabel.Text = photoAlbumOwner
+                    BioLabel.Text = ownerProfile.Bio
+                    PhotoAlbumDetails.Visible = True
+                Else
+                    PhotoAlbumDetails.Visible = False
+                End If
+            End Using
         Else
             EditLink.Visible = False
         End If
