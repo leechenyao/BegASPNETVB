@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Calculator Demo" Language="VB" AutoEventWireup="false" CodeFile="CalculatorDemo.aspx.vb" Inherits="Demos_CalculatorDemo" %>
+﻿<%@ Page Title="Calculator Demo" Language="VB" AutoEventWireup="false" CodeFile="CalculatorDemo.aspx.vb" Inherits="Demos_CalculatorDemo" Trace="false" %>
 
 <!DOCTYPE html>
 

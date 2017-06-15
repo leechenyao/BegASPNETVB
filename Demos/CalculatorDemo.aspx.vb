@@ -8,6 +8,7 @@ Partial Class Demos_CalculatorDemo
             Dim value1 As Double = Convert.ToDouble(ValueBox1.Text)
             Dim value2 As Double = Convert.ToDouble(ValueBox2.Text)
             Dim myCalculator As New Calculator()
+            Trace.Write(String.Format("Performing the calculation with the {0} operator", OperatorList.SelectedValue))
             Select Case OperatorList.SelectedValue
                 Case "+"
                     result = myCalculator.Add(value1, value2)
@@ -21,6 +22,7 @@ Partial Class Demos_CalculatorDemo
             ResultLabel.Text = result.ToString()
         Else
             ResultLabel.Text = String.Empty
+            Trace.Warn("Custom Category", "TextBox controls are empty; time to add Validation controls?")
         End If
     End Sub
 End Class

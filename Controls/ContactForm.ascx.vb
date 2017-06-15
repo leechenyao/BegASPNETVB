@@ -21,18 +21,23 @@ Partial Class Controls_ContactForm
             mailBody = mailBody.Replace("##HomePhone##", PhoneHome.Text)
             mailBody = mailBody.Replace("##BusinessPhone##", PhoneBusiness.Text)
             mailBody = mailBody.Replace("##Comments##", Comments.Text)
-            Dim myMessage As MailMessage = New MailMessage()
-            myMessage.Subject = "Response from web site"
-            myMessage.Body = mailBody
-            myMessage.From = New MailAddress("you@example.com", "Sender Name")
-            myMessage.To.Add(New MailAddress("you@example.com", "Receiver Name"))
-            myMessage.ReplyToList.Add(New MailAddress(EmailAddress.Text))
-            Dim mySmtpClient As SmtpClient = New SmtpClient()
-            mySmtpClient.Send(myMessage)
-            Message.Visible = True
-            MessageSentPara.Visible = True
-            FormTable.Visible = False
-            System.Threading.Thread.Sleep(5000)
+            Try
+                Dim myMessage As MailMessage = New MailMessage()
+                myMessage.Subject = "Response from web site"
+                myMessage.Body = mailBody
+                myMessage.From = New MailAddress("you@example.com", "Sender Name")
+                myMessage.To.Add(New MailAddress("you@example.com", "Receiver Name"))
+                myMessage.ReplyToList.Add(New MailAddress(EmailAddress.Text))
+                Dim mySmtpClient As SmtpClient = New SmtpClient()
+                mySmtpClient.Send(myMessage)
+                MessageSentPara.Visible = True
+                FormTable.Visible = False
+                System.Threading.Thread.Sleep(5000)
+            Catch ex As SmtpException
+                Message.Text = "An error occurred while sending your e-mail. Please try again."
+            Finally
+                Message.Visible = True
+            End Try
         End If
     End Sub
 End Class

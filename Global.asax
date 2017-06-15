@@ -1,4 +1,5 @@
 ﻿<%@ Application Language="VB" %>
+<%@ Import Namespace="System.Net.Mail" %>
 
 <script RunAt="server">
 
@@ -12,7 +13,20 @@
     End Sub
 
     Sub Application_Error(ByVal sender As Object, ByVal e As EventArgs)
-        ' Code that runs when an unhandled error occurs
+        If HttpContext.Current.Server.GetLastError() IsNot Nothing Then
+            Dim myException As Exception = HttpContext.Current.Server.GetLastError().GetBaseException()
+            Dim mailSubject As String = "Error in page " & Request.Url.ToString()
+            Dim message As String = String.Empty
+            message &= "<strong>Message</strong><br />" & myException.Message & "<br />"
+            message &= "<strong>Stack Trace</strong><br />" &
+            myException.StackTrace & "<br />"
+            message &= "<strong>Query String</strong><br />" &
+            Request.QueryString.ToString() & "<br />"
+            Dim myMessage As MailMessage = New MailMessage("you@example.com", "you@example.com", mailSubject, message)
+            myMessage.IsBodyHtml = True
+            Dim mySmtpClient As SmtpClient = New SmtpClient()
+            mySmtpClient.Send(myMessage)
+        End If
     End Sub
 
     Sub Session_Start(ByVal sender As Object, ByVal e As EventArgs)
